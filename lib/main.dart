@@ -1,4 +1,5 @@
 import 'package:coliseum_fit/modules/aluno/home_page.dart';
+import 'package:coliseum_fit/modules/funcionario/home_page.dart';
 import 'package:coliseum_fit/shared/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/' : (context) => LoginPage(),
-        '/home_page' : (context) => HomePage(),
+        '/home_page_funcionario' : (context) => HomePageFuncionario(),
+        '/home_page_aluno' : (context) => HomePageAluno(),
       },
     );
   }

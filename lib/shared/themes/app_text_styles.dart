@@ -23,7 +23,6 @@ class AppTextStyles {
     fontWeight: FontWeight.w200,
     color: Colors.white,
   );
-
   
   static final loginButtonSelected = GoogleFonts.openSans(
     fontSize: 16,
@@ -37,11 +36,23 @@ class AppTextStyles {
     color: Colors.white,
   );
 
-  
   static final titleHome = GoogleFonts.openSans(
-    fontSize: 32,
+    fontSize: 16,
     fontWeight: FontWeight.w500,
     color: Colors.white,
+  );
+
+  // DRAWER
+  static final titleDrawer = GoogleFonts.openSans(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColors.background,
+  );
+  // DRAWER
+  static final subtitleDrawer = GoogleFonts.openSans(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: AppColors.background,
   );
 
   // TEXTS LOGO

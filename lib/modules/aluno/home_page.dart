@@ -10,8 +10,6 @@ class HomePageAluno extends StatefulWidget {
   State<HomePageAluno> createState() => _HomePageAlunoState();
 }
 
-
-
 class _HomePageAlunoState extends State<HomePageAluno> {
 
   @override

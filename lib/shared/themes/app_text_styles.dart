@@ -42,13 +42,28 @@ class AppTextStyles {
     color: Colors.white,
   );
 
+  // ListTile
+   static final titleList = GoogleFonts.openSans(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
+  // ListTile
+   static final subtitleList = GoogleFonts.openSans(
+    fontSize: 16,
+    fontWeight: FontWeight.w100,
+    color: Colors.white,
+  );
+
+
   // DRAWER
   static final titleDrawer = GoogleFonts.openSans(
     fontSize: 16,
     fontWeight: FontWeight.bold,
     color: AppColors.background,
   );
-  // DRAWER
+
   static final subtitleDrawer = GoogleFonts.openSans(
     fontSize: 16,
     fontWeight: FontWeight.normal,

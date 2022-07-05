@@ -6,12 +6,12 @@ class AppColors{
   static const Color seaGreen = Color(0xFF008148);
   static const Color warningtangerine = Color(0xFFEF8A17);
   static const Color warningRed = Color(0xFFEF2917);
+  static const Color backgroundButton = Color.fromARGB(255, 93, 93, 93);
   static const Color border = Colors.grey;
-  static const Color backgroundButton = Color(0xFFC4C4C4);
 }
 
 const MaterialColor MaterialCustomColor = MaterialColor(
-    0xFF276678,
+    0xFFD0FD3E,
     <int, Color> {
       50: AppColors.background,
       100: AppColors.primary,
@@ -22,4 +22,9 @@ const MaterialColor MaterialCustomColor = MaterialColor(
       600: AppColors.backgroundButton,
       700: AppColors.background,
     }
+  );
+
+  const FloatingActionButtonThemeData floatingActionButtonCustomTheme = FloatingActionButtonThemeData(
+    backgroundColor: AppColors.backgroundButton,
+    foregroundColor: AppColors.primary,
   );

@@ -1,3 +1,4 @@
+import 'package:coliseum_fit/modules/aluno/home_page.dart';
 import 'package:coliseum_fit/shared/themes/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +18,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ColiseumFit',
       theme: ThemeData(
+        floatingActionButtonTheme: floatingActionButtonCustomTheme,
         primarySwatch: MaterialCustomColor,
+        secondaryHeaderColor: MaterialCustomColor,
       ),
-      home: LoginPage(),
+      routes: {
+        '/' : (context) => LoginPage(),
+        '/home_page' : (context) => HomePage(),
+      },
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:coliseum_fit/shared/themes/app_colors.dart';
 import 'package:coliseum_fit/shared/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import '../../shared/input_text_widget.dart';
 import 'login_controller.dart';
 
 class LoginPage extends StatefulWidget {
@@ -100,9 +101,11 @@ class _LoginPageState extends State<LoginPage> {
                       "Cadastre-se",
                       style: AppTextStyles.loginButtonSelected,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/cadastro');
+                    },
                   ),
-                  Text("Agora!", style: AppTextStyles.loginSimple),
+                  Text("agora!", style: AppTextStyles.loginSimple),
                 ],
               ),
             ),
@@ -114,25 +117,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget inputText(String title, TextEditingController _controller,{bool password = false}) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 26.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title + ":",
-            style: AppTextStyles.loginTitleField,
-          ),
-          TextField(
-            style: AppTextStyles.loginInputField,
-            controller: _controller,
-            obscureText: password,
-            decoration: InputDecoration(focusColor: AppColors.primary),
-          )
-        ],
-      ),
-    );
-  }
+  
 }

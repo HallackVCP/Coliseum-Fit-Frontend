@@ -43,7 +43,7 @@ class CustomDrawer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16),
       child: ListTile(
-        leading: CircleAvatar(radius: 26, backgroundColor: AppColors.backgroundButton, child: Icon(icon, size: 26, color: AppColors.primary),),
+        leading: CircleAvatar(radius: 26, backgroundColor: AppColors.background, child: Icon(icon, size: 26, color: AppColors.primary),),
         title: Text(title, style: AppTextStyles.titleDrawer,),
         ),
     );

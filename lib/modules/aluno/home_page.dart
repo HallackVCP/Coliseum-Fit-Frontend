@@ -1,4 +1,5 @@
 import 'package:coliseum_fit/shared/themes/app_text_styles.dart';
+import 'package:coliseum_fit/shared/widgets/custom_widgets.dart';
 import 'package:flutter/material.dart';
 import '../../shared/themes/app_colors.dart';
 import 'drawer.dart';
@@ -15,7 +16,13 @@ class _HomePageAlunoState extends State<HomePageAluno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: CustomDrawer(
+        widgets: [
+          drawerOption(title: "Ficha", icon: Icons.paste),
+          drawerOption(title: "Minha saude", icon: Icons.medical_information),
+          drawerOption(title: "Matricula", icon: Icons.calendar_month),
+        ],
+      ),
       drawerScrimColor: AppColors.background,
       backgroundColor: AppColors.background,
       appBar: AppBar(

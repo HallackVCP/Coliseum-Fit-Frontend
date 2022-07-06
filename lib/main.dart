@@ -1,5 +1,6 @@
 import 'package:coliseum_fit/modules/admin/home_page.dart';
 import 'package:coliseum_fit/modules/aluno/home_page.dart';
+import 'package:coliseum_fit/modules/aluno/planos_page.dart';
 import 'package:coliseum_fit/modules/funcionario/home_page.dart';
 import 'package:coliseum_fit/modules/login/cadastro_page.dart';
 import 'package:coliseum_fit/shared/themes/app_colors.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/home_page_admin' : (context) => HomePageFuncionarioADM(),
         '/home_page_aluno' : (context) => HomePageAluno(),
         '/cadastro' : (context) => CadastroPage(),
+        '/planos' : (context) => PlanosPage(),
       },
     );
   }

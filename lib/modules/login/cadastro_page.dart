@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/input_text_widget.dart';
+import '../../shared/widgets/input_text_widget.dart';
 import '../../shared/themes/app_colors.dart';
 import '../../shared/themes/app_text_styles.dart';
 
@@ -25,9 +25,10 @@ class _CadastroPageState extends State<CadastroPage> {
    return Scaffold(
       backgroundColor: AppColors.background,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+          appBar: AppBar(backgroundColor: AppColors.background, foregroundColor: AppColors.primary, title: Text("Cadastro"),),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            
+            Navigator.pushNamed(context, '/planos');
           },
           backgroundColor: AppColors.primary,
           foregroundColor: AppColors.background,
@@ -41,7 +42,6 @@ class _CadastroPageState extends State<CadastroPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(height: 90),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Image.asset("assets/images/logo_sem_fundo.png"),
@@ -59,8 +59,8 @@ class _CadastroPageState extends State<CadastroPage> {
             inputText("Email", _email),
             inputText("CPF", _cpf, numericInput: true),
             inputText("Telefone", _telefone, numericInput: true),
-            inputText("Senha", _senha),
-            inputText("Confirmar senha", _confirmarSenha),
+            inputText("Senha", _senha, password: true),
+            inputText("Confirmar senha", _confirmarSenha, password: true),
             //inputText("Senha", , password: true),
             
             // OPCAO DE CADASTRO

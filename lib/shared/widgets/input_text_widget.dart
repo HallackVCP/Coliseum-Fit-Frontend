@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'themes/app_colors.dart';
-import 'themes/app_text_styles.dart';
+import '../themes/app_colors.dart';
+import '../themes/app_text_styles.dart';
 
 Widget inputText(String title, TextEditingController _controller,{bool password = false, bool numericInput = false}) {
     return Padding(

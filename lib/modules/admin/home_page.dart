@@ -1,7 +1,8 @@
 import 'package:coliseum_fit/shared/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import '../../shared/themes/app_colors.dart';
-import 'drawer.dart';
+import '../../shared/widgets/custom_widgets.dart';
+import '../../shared/widgets/drawer.dart';
 
 class HomePageFuncionarioADM extends StatefulWidget {
   const HomePageFuncionarioADM({Key? key}) : super(key: key);
@@ -18,7 +19,15 @@ class _HomePageFuncionarioADM extends State<HomePageFuncionarioADM> {
         onPressed: () {},
         child: Icon(Icons.search),
       ),
-      drawer: CustomDrawer(),
+      drawer: CustomDrawer(
+        widgets: [
+          drawerOption(title: "Visualizar funcionarios", icon: Icons.group),
+          drawerOption(title: "Editar matrículas", icon: Icons.edit_calendar),
+          Divider(),
+          drawerOption(title: "Editar perfil", icon: Icons.edit),
+          Divider(),
+        ],
+      ),
       drawerScrimColor: AppColors.background,
       backgroundColor: AppColors.background,
       appBar: AppBar(

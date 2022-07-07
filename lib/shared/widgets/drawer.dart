@@ -1,8 +1,8 @@
 import 'package:coliseum_fit/shared/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../shared/themes/app_colors.dart';
-import '../../shared/widgets/custom_widgets.dart';
+import '../themes/app_colors.dart';
+import 'custom_widgets.dart';
 
 class CustomDrawer extends StatelessWidget {
   List<Widget> widgets;
@@ -25,7 +25,7 @@ class CustomDrawer extends StatelessWidget {
             Divider(),
             
             SizedBox(
-                height: (90.0 * widgets.length),
+                height: (70.0 * widgets.length),
                 child: Center(
                   child: ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
@@ -34,14 +34,8 @@ class CustomDrawer extends StatelessWidget {
                   ),
               ),
             ),
-
-            Divider(),
-            drawerOption(title: "Editar perfil", icon: Icons.edit),
-            drawerOption(title: "Sair", icon: Icons.exit_to_app),
-            Divider(),
-
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 28.0),
+              padding: const EdgeInsets.symmetric(vertical: 22.0),
               child: TextButton(onPressed: (() => Navigator.pop(context)), child: Text("Fechar", style: AppTextStyles.titleDrawer,),),
             ),
           ],

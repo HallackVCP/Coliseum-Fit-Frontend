@@ -2,7 +2,7 @@ import 'package:coliseum_fit/shared/themes/app_text_styles.dart';
 import 'package:coliseum_fit/shared/widgets/custom_widgets.dart';
 import 'package:flutter/material.dart';
 import '../../shared/themes/app_colors.dart';
-import 'drawer.dart';
+import '../../shared/widgets/drawer.dart';
 
 class HomePageAluno extends StatefulWidget {
   const HomePageAluno({Key? key}) : super(key: key);
@@ -21,6 +21,10 @@ class _HomePageAlunoState extends State<HomePageAluno> {
           drawerOption(title: "Ficha", icon: Icons.paste),
           drawerOption(title: "Minha saude", icon: Icons.medical_information),
           drawerOption(title: "Matricula", icon: Icons.calendar_month),
+          Divider(),
+          drawerOption(title: "Editar perfil", icon: Icons.edit),
+          drawerOption(title: "Sair", icon: Icons.exit_to_app),
+          Divider(),
         ],
       ),
       drawerScrimColor: AppColors.background,

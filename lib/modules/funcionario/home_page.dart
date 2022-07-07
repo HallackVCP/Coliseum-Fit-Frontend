@@ -1,7 +1,8 @@
 import 'package:coliseum_fit/shared/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import '../../shared/themes/app_colors.dart';
-import 'drawer.dart';
+import '../../shared/widgets/custom_widgets.dart';
+import '../../shared/widgets/drawer.dart';
 
 class HomePageFuncionario extends StatefulWidget {
   const HomePageFuncionario({Key? key}) : super(key: key);
@@ -11,12 +12,21 @@ class HomePageFuncionario extends StatefulWidget {
 }
 
 class _HomePageFuncionario extends State<HomePageFuncionario> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Icon(Icons.search),),
-      drawer: CustomDrawer(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.search),
+      ),
+      drawer: CustomDrawer(widgets: [
+        drawerOption(title: "Visualizar alunos", icon: Icons.group),
+        drawerOption(title: "Minha saúde", icon: Icons.medical_information),
+        drawerOption(title: "Matrícula", icon: Icons.edit_calendar),
+        Divider(),
+        drawerOption(title: "Editar perfil", icon: Icons.edit),
+        Divider(),
+      ]),
       drawerScrimColor: AppColors.background,
       backgroundColor: AppColors.background,
       appBar: AppBar(
@@ -38,7 +48,12 @@ class _HomePageFuncionario extends State<HomePageFuncionario> {
                 "Bom dia, João!",
                 style: AppTextStyles.titleHome,
               ),
-              Text(DateTime.now().day.toString() + " / " + DateTime.now().month.toString(), style: AppTextStyles.loginSimple,),
+              Text(
+                DateTime.now().day.toString() +
+                    " / " +
+                    DateTime.now().month.toString(),
+                style: AppTextStyles.loginSimple,
+              ),
             ],
           ),
           actions: const [
